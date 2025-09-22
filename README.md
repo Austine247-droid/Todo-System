@@ -50,6 +50,8 @@ my-department-todo/
 │── node_modules/
 
 ```
+## Screenshot
+<img src="https://github.com/Austine247-droid/Todo-System/blob/master/screenshot11.png?raw=true">  
 
 ## ⚡ Setup Instructions
 
