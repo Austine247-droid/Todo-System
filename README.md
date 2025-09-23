@@ -1,4 +1,4 @@
-# 📝 Modern TODO System
+# 📝 Modern TODO System - ASSESSMENT
 
 A feature-rich TODO application built with Next.js, TypeScript, and Chakra UI, designed with a clean, modern UI for productivity and simplicity.
 This app allows users to create, organize, and manage tasks effectively without relying on an external backend.
