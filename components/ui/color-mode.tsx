@@ -1,3 +1,4 @@
+// components/ui/color-mode.tsx
 'use client'
 
 import type { IconButtonProps, SpanProps } from '@chakra-ui/react'
@@ -9,15 +10,13 @@ import {
   ChakraProvider,
   defaultSystem,
 } from '@chakra-ui/react'
-import { ThemeProvider, useTheme } from 'next-themes'
-import type { ThemeProviderProps } from 'next-themes'
+import { ThemeProvider, useTheme, type ThemeProviderProps } from 'next-themes'
 import * as React from 'react'
-import { LuMoon, LuSun } from 'react-icons/lu' // Assuming you're using react-icons for LuMoon/LuSun
+import { LuMoon, LuSun } from 'react-icons/lu'
 
-export interface ColorModeProviderProps extends ThemeProviderProps {}
+// Use type alias instead of empty interface
+export type ColorModeProviderProps = ThemeProviderProps
 
-// Use defaultSystem from Chakra UI v3, or create a custom system if needed
-// For now, we'll use defaultSystem to keep it simple
 const system = defaultSystem
 
 export function ColorModeProvider({ children, ...props }: ColorModeProviderProps) {
@@ -53,7 +52,8 @@ export function ColorModeIcon() {
   return colorMode === 'light' ? <LuMoon /> : <LuSun />
 }
 
-interface ColorModeButtonProps extends Omit<IconButtonProps, 'aria-label'> {}
+// Use type alias instead of empty interface
+export type ColorModeButtonProps = Omit<IconButtonProps, 'aria-label'>
 
 export const ColorModeButton = React.forwardRef<HTMLButtonElement, ColorModeButtonProps>(
   function ColorModeButton(props, ref) {
